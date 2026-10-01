@@ -31,7 +31,7 @@ section{padding:84px 0}h2{font-size:clamp(2.2rem,4vw,3.8rem);letter-spacing:-.05
 footer{background:#07121f;color:#aab6c2;padding:31px 0;font-size:.9rem}.footer-row{display:flex;justify-content:space-between;gap:20px}
 @media(max-width:780px){.wrap{width:min(100% - 28px,1160px)}.hero{min-height:650px;background-position:64% center;background-image:linear-gradient(90deg,rgba(3,10,18,.94),rgba(3,10,18,.55)),url('assets/arsben-luxury-kitchen.webp')}.hero-content{padding:80px 0}.grid{grid-template-columns:1fr}.trust{grid-template-columns:1fr;margin-top:-28px}.trust div{border-right:0;border-bottom:1px solid var(--line);padding:18px 22px}.header-call span{display:none}.phone-short{display:inline}.footer-row{display:block}.contact-grid,.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.navright{gap:7px}.btn{padding:11px 13px}section{padding:64px 0}}
 </style>
-</head>
+<link rel="stylesheet" href="/assets/mobile-contact-bar.css"></head>
 <body>
 <header><nav class="wrap"><a class="brand" href="#">Appliance Repair Service <em>by</em> Ben</a><div class="navright"><div class="lang" aria-label="Language"><button id="en" class="active" type="button">EN</button><button id="es" type="button">ES</button></div><a class="btn header-call" href="tel:+19549321006"><span data-i18n="navCall">Call 954-932-1006</span><b class="phone-short">Call</b></a></div></nav></header>
 <main>
@@ -64,4 +64,4 @@ es:{navCall:"Llama al 954-932-1006",eyebrow:"Servicio de Reparación de Electrod
 function setLang(lang){document.documentElement.lang=lang;document.querySelectorAll("[data-i18n]").forEach(el=>el.textContent=copy[lang][el.dataset.i18n]);document.querySelectorAll("[data-placeholder]").forEach(el=>el.placeholder=copy[lang][el.dataset.placeholder]);document.querySelectorAll(".lang button").forEach(b=>b.classList.toggle("active",b.id===lang));localStorage.setItem("arsben-lang",lang)}
 document.getElementById("en").onclick=()=>{localStorage.setItem("arsben-lang","en");location.href="/"};document.getElementById("es").onclick=()=>{localStorage.setItem("arsben-lang","es");location.href="/es/"};setLang("en");
 </script>
-</body></html>
+<script src="/assets/mobile-contact-bar.js" defer></script></body></html>
